@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@600&family=Montserrat:wght@400;500&family=Mulish:wght@300;400&family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  margin: 0 50px;
+  font-family: "Arimo", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#posts {
+    width: 400px;
+}
+
+#posts div {
+    display: flex;
+    align-items: center;
+    /* gap: 400px; */
+    justify-content: space-between;
+}
+
+.options {
+    display: flex;
+    gap: 25px;
+}
+
+i {
+    cursor: pointer;
+}
