@@ -1,6 +1,7 @@
 let form = document.getElementById("form");
 let input = document.getElementById("input");
 let msg = document.getElementById('msg')
+let posts = document.getElementById('posts')
 
 let data = {}
 
@@ -20,6 +21,12 @@ form.addEventListener("submit", formValidation);
 
 const acceptData = () => {
     data["text"] = input.value
-    console.log(data)
+    createPost()
+    // console.log(data)
+}
+
+const createPost = () => {
+    posts.innerHTML += data.text
+    input.value = ""
 }
 
