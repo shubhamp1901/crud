@@ -33,3 +33,7 @@ body {
 i {
     cursor: pointer;
 }
+
+#msg {
+    color: red;
+}
