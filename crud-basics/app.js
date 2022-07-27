@@ -26,7 +26,13 @@ const acceptData = () => {
 }
 
 const createPost = () => {
-    posts.innerHTML += data.text
+    posts.innerHTML += `<div>
+    <p>${data.text}</p>
+    <span class="options">
+      <i class="fas fa-edit"></i>
+      <i class="fas fa-trash-alt"></i>
+    </span>
+  </div>`
     input.value = ""
 }
 
