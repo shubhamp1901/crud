@@ -9,11 +9,11 @@ const formValidation = (e) => {
     e.preventDefault()
   if (input.value !== "") {
     acceptData()
-    console.log("success");
+    // console.log("success");
     msg.innerHTML = ""
   } else {
     msg.innerHTML = "Post Cannot be blank"
-    console.log("failure");
+    // console.log("failure");
   }
 };
 
@@ -29,10 +29,19 @@ const createPost = () => {
     posts.innerHTML += `<div>
     <p>${data.text}</p>
     <span class="options">
-      <i class="fas fa-edit"></i>
-      <i class="fas fa-trash-alt"></i>
+      <i onClick="updatePost(this)" class="fas fa-edit"></i>
+      <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
     </span>
   </div>`
     input.value = ""
+}
+
+const deletePost = (e) => {
+  e.parentElement.parentElement.remove()
+}
+
+const updatePost = (e) => {
+  input.value = e.parentElement.previousElementSibling.innerHTML;
+  e.parentElement.parentElement.remove()
 }
 
