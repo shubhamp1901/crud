@@ -56,6 +56,7 @@ const createTasks = () => {
   resetForm();
 };
 // this means only gonna target edit or delete not entire div
+// createTasks = it'll re-run after every deletion to display the updated number of tasks
 
 const resetForm = () => {
   textInput.value = "";
