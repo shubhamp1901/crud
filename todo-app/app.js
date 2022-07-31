@@ -18,7 +18,10 @@ let formValidation = (e) => {
     msg.innerHTML = "";
     acceptData();
     add.setAttribute("data-bs-dismiss", "modal");
-    add.click()(() => {
+    add.click();
+
+    
+    (() => {
       add.setAttribute("data-bs-dismiss", "");
     })();
   }
